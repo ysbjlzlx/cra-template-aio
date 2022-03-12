@@ -1,6 +1,7 @@
 {
   "name": "cra-template-aio",
   "version": "1.0.0",
+  "private": false,
   "keywords": [
     "react",
     "create-react-app",

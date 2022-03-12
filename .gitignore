@@ -4,3 +4,6 @@
 # editor
 /.idea
 /.vscode
+
+# project
+/package-lock.json
