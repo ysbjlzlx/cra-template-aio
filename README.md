@@ -8,6 +8,9 @@
 
 ```sh
 npx create-react-app my-app --template cra-template-aio
+cd my-app
+# 配置 husky
+npm run prepare
 ```
 
 ## 代码风格
