@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router-dom';
 
 import Layout from './layouts/Index';
 import Loading from './pages/Loading';
+import NotFound from './pages/NotFound';
 
 const App = lazy(() => import('./pages/App'));
 
@@ -11,7 +12,16 @@ export default function Routes() {
     {
       path: '/',
       element: <Layout />,
-      children: [{ index: true, element: <Suspense fallback={<Loading />} children={<App />} /> }],
+      children: [
+        {
+          index: true,
+          element: <Suspense fallback={<Loading />} children={<App />} />,
+        },
+      ],
+    },
+    {
+      path: '*',
+      element: <NotFound />,
     },
   ]);
 }
