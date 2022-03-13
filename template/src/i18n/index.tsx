@@ -6,27 +6,38 @@ import { useRootStoreContext } from '../stores';
 import en from './lang/en';
 import zhCN from './lang/zh-CN';
 
+/**
+ * 添加支持的语言类型
+ */
+const locales: Record<string, IntlConfig> = {
+  en: { locale: 'en', messages: en },
+  'zh-CN': { locale: 'zh-CN', messages: zhCN },
+};
+
+/**
+ * 配置默认的语言类型
+ */
+const defaultLocal = 'zh-CN';
+
 const I18n: FC = ({ children }) => {
   const [intlConfig, setIntlConfig] = useState<IntlConfig>({
-    locale: 'zh-CN',
-    messages: zhCN,
-    defaultLocale: 'zh-CN',
+    ...locales[defaultLocal],
+    defaultLocale: defaultLocal,
   });
   const { app } = useRootStoreContext();
   const cache = createIntlCache();
 
   useEffect(() => {
-    setIntlConfig((intlConfig) => {
-      switch (app.locale) {
-        case 'en':
-          return { ...intlConfig, locale: 'en', messages: en };
-        case 'zh-CN':
-          return { ...intlConfig, locale: 'zh-CN', messages: zhCN };
-        default:
-          return { ...intlConfig };
-      }
-    });
-  }, [app.locale]);
+    if (Object.keys(locales).includes(app.locale || '')) {
+      const current = locales[app.locale || ''];
+      setIntlConfig((intlConfig) => {
+        return { ...intlConfig, ...current };
+      });
+    } else {
+      console.error('不支持的语言类型：', app.locale);
+      app.setLocale(defaultLocal);
+    }
+  }, [app, app.locale]);
 
   const intl = createIntl(intlConfig, cache);
   return <RawIntlProvider value={intl}>{children}</RawIntlProvider>;
