@@ -12,8 +12,9 @@
 ## 目录
 
 * [安装](#安装)
-* [使用](#使用)
+* [使用](#运行)
 * [代码风格](#代码风格)
+* [自定义配置](#自定义配置)
 * [已安装依赖](#已安装依赖)
 * [推荐安装依赖](#推荐安装依赖)
 
@@ -44,10 +45,7 @@ npm install --save-dev prettier @umijs/fabric
 # git commit 前自动格式化
 npx mrm@2 lint-staged
 ```
-
-## 已安装依赖
-
-### 自定义配置注入
+## 自定义配置
 
 `@craco/craco@6.0` 版本不兼容 `react-scripts@5.0.0` 版本，所以使用 alpha 版本
 
@@ -57,56 +55,23 @@ npm install --save @craco/craco@7.0.0-alpha.3
 npm install --save-dev eslint-config-react-app
 ```
 
-### 路由
+## 已安装依赖
 
-```shell
-npm install --save react-router-dom
-```
+| 组件名称                                               | 功能        |
+|----------------------------------------------------|-----------|
+| `react-router-dom`                                 | 路由        |
+| `mobx-react-lite` `mobx-state-tree`                | 状态管理      |
+| `react-intl`                                       | 国际化       |
+| `@mui/material` `@emotion/react` `@emotion/styled` | MUI 组件    |
+| `react-hook-form` `@hookform/resolvers` `joi`      | 表单处理及数据校验 |
+| `axios`                                            | 网络请求      |
 
-### 状态管理
-
-```shell
-npm install --save mobx-react-lite mobx-state-tree
-```
-
-### 多语言
-
-```shell
-npm install --save react-intl
-```
-
-### UI 组件
-
-```shell
-# MUI 组件
-npm install --save @mui/material @emotion/react @emotion/styled
-# 表单处理及数据校验
-npm install --save react-hook-form @hookform/resolvers joi
-```
-
-### 网络请求
-
-```shell
-npm install --save axios
-```
 
 ## 推荐安装依赖
 
-### UI 图标
+| 组件名称                      | 功能          | 安装命令                                                        |
+|---------------------------|-------------|-------------------------------------------------------------|
+| `@mui/icons-material`     | Material 图标 | `npm i --save @mui/icons-material`                          |
+| `date-fns`                | 日期时间处理      | `npm i --save date-fns`                                     |
+| `lodash`  `@types/lodash` | 函数处理        | `npm i --save lodash`<br />`npm i --save-dev @types/lodash` |
 
-```shell
-npm install --save @mui/icons-material
-```
-
-### 日期时间处理
-
-```shell
-npm install --save date-fns
-```
-
-### 函数处理
-
-```shell
-npm install --save lodash
-npm install --save-dev @types/lodash
-```
