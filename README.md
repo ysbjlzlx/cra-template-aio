@@ -29,10 +29,10 @@ npx create-react-app my-app --template cra-template-aio
 npm run prepare
 ```
 
-## 使用
+## 运行
 
 ```shell
-# http://127.0.0.1:3000
+# http://localhost:3000
 npm run start
 ```
 
