@@ -80,8 +80,6 @@ npm install --save react-intl
 ```shell
 # MUI 组件
 npm install --save @mui/material @emotion/react @emotion/styled
-# 图标
-npm install --save @mui/icons-material
 # 表单处理及数据校验
 npm install --save react-hook-form @hookform/resolvers joi
 ```
@@ -93,6 +91,12 @@ npm install --save axios
 ```
 
 ## 推荐安装依赖
+
+### UI 图标
+
+```shell
+npm install --save @mui/icons-material
+```
 
 ### 日期时间处理
 
