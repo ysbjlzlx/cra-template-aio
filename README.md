@@ -99,3 +99,10 @@ npm install --save axios
 ```shell
 npm install --save date-fns
 ```
+
+### 函数处理
+
+```shell
+npm install --save lodash
+npm install --save-dev @types/lodash
+```
