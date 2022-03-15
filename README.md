@@ -94,12 +94,6 @@ npm install --save axios
 
 ## 推荐安装依赖
 
-### Props 类型定义
-
-```shell
-npm install --save prop-types
-```
-
 ### 日期时间处理
 
 ```shell
