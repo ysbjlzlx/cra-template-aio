@@ -7,7 +7,7 @@
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/ysbjlzlx/cra-template-aio?style=social)](https://github.com/ysbjlzlx/cra-template-aio)
 
-`aio` (ALL in one) 是一个处理好前端常用开发组件的 `create-react-app` 模版库，项目开箱可用。
+`aio` (ALL in one) 是已安装且配置好前端常用开发组件的 `create-react-app` 模版，项目开箱可用。
 
 ## 目录
 
