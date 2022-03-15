@@ -1,15 +1,23 @@
 # cra-template-aio
 
-## 简介
+[![GitHub](https://img.shields.io/github/license/ysbjlzlx/cra-template-aio)](https://github.com/ysbjlzlx/cra-template-aio/blob/main/LICENSE)
+[![npm](https://img.shields.io/npm/v/cra-template-aio)](https://www.npmjs.com/package/cra-template-aio)
+[![npm](https://img.shields.io/npm/dy/cra-template-aio)](https://www.npmjs.com/package/cra-template-aio)
 
-`aio` 是 All in one 的意思，添加常用依赖，项目开箱可用。
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/ysbjlzlx/cra-template-aio?style=social)](https://github.com/ysbjlzlx/cra-template-aio)
+
+`aio` (ALL in one) 是一个处理好前端常用开发组件的 `create-react-app` 模版库，项目开箱可用。
 
 ## 安装
 
+初始化项目
 ```sh
 npx create-react-app my-app --template cra-template-aio
-cd my-app
-# 配置 husky
+```
+
+初始化 commit hooks
+```bash
 npm run prepare
 ```
 
