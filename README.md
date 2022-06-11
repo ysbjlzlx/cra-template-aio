@@ -12,16 +12,12 @@
 ## 目录
 
 * [安装](#安装)
-* [使用](#运行)
-* [代码风格](#代码风格)
-* [自定义配置](#自定义配置)
+* [运行](#运行)
 * [已安装依赖](#已安装依赖)
 * [推荐安装依赖](#推荐安装依赖)
 
 ## 安装
 
-初始化项目  
-暂不支持 `npm`
 ```shell
 yarn create react-app my-app --template cra-template-aio
 ```
@@ -33,41 +29,25 @@ yarn create react-app my-app --template cra-template-aio
 yarn run start
 ```
 
-## 代码风格
-
-```shell
-# 使用 umijs 代码风格
-npm install --save-dev prettier @umijs/fabric
-# git commit 前自动格式化
-npx mrm@2 lint-staged
-```
-## 自定义配置
-
-`@craco/craco@6.0` 版本不兼容 `react-scripts@5.0.0` 版本，所以使用 alpha 版本
-
-```shell
-npm install --save @craco/craco@7.0.0-alpha.3
-# 解决配置注入中的编译异常
-npm install --save-dev eslint-config-react-app
-```
-
 ## 已安装依赖
 
-| 组件名称                                               | 功能        |
-|----------------------------------------------------|-----------|
-| `react-router-dom`                                 | 路由        |
-| `mobx-react-lite` `mobx-state-tree`                | 状态管理      |
-| `react-intl`                                       | 国际化       |
-| `@mui/material` `@emotion/react` `@emotion/styled` | MUI 组件    |
-| `react-hook-form` `@hookform/resolvers` `joi`      | 表单处理及数据校验 |
-| `axios`                                            | 网络请求      |
+| 组件名称                                                   | 功能           |
+|--------------------------------------------------------|:-------------|
+| `react-router-dom`                                     | 路由           |
+| `mobx` `mobx-react-lite` `mobx-state-tree`             | 状态管理         |
+| `react-intl`                                           | 国际化          |
+| `@mui/material` `@emotion/react` `@emotion/styled`     | MUI 组件       |
+| `react-hook-form` `@hookform/resolvers` `joi`          | 表单处理及数据校验    |
+| `axios`                                                | 网络请求         |
+| `husky` `lint-staged` `prettier` `@umijs/fabric`       | Code style   |
+| `@craco/craco@7.0.0-alpha.3` `eslint-config-react-app` | Build config |
 
 
 ## 推荐安装依赖
 
-| 组件名称                      | 功能          | 安装命令                                                        |
-|---------------------------|-------------|-------------------------------------------------------------|
-| `@mui/icons-material`     | Material 图标 | `npm i --save @mui/icons-material`                          |
-| `date-fns`                | 日期时间处理      | `npm i --save date-fns`                                     |
-| `lodash`  `@types/lodash` | 函数处理        | `npm i --save lodash`<br />`npm i --save-dev @types/lodash` |
+| 组件名称                     | 功能          | 安装命令                                               |
+|--------------------------|-------------|----------------------------------------------------|
+| `@mui/icons-material`    | Material 图标 | `yarn add @mui/icons-material`                     |
+| `date-fns`               | 日期时间处理      | `yarn add date-fns`                                |
+| `lodash` `@types/lodash` | 函数处理        | `yarn add lodash`<br />`yarn add -D @types/lodash` |
 
