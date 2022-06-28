@@ -51,3 +51,6 @@ yarn run start
 | `date-fns`               | 日期时间处理      | `yarn add date-fns`                                |
 | `lodash` `@types/lodash` | 函数处理        | `yarn add lodash`<br />`yarn add -D @types/lodash` |
 
+## 已知问题
+
+* 当使用 `npx create-react-app my-app --template aio` 创建项目时 script `prepare` 不会自动执行，需要项目创建后手动执行
