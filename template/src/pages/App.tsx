@@ -1,11 +1,11 @@
-import React, { ReactElement } from 'react';
-import { observer } from 'mobx-react-lite';
 import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material';
+import { observer } from 'mobx-react-lite';
+import { ReactElement } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useRootStoreContext } from '../stores';
 
-import logo from './logo.svg';
 import './App.css';
+import logo from './logo.svg';
 
 const App = (): ReactElement => {
   const { app } = useRootStoreContext();
@@ -22,12 +22,7 @@ const App = (): ReactElement => {
         <p>
           Edit <code>src/pages/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
         <FormControl sx={{ mt: 2 }}>

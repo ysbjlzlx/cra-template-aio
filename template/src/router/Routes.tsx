@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { RouteObject } from 'react-router-dom';
 import Layout from '../layouts/Index';
 import Loading from '../pages/Loading';
@@ -10,7 +10,16 @@ const Routes: RouteObject[] = [
   {
     path: '/',
     element: <Layout />,
-    children: [{ index: true, element: <Suspense fallback={<Loading />} children={<App />} /> }],
+    children: [
+      {
+        index: true,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <App />
+          </Suspense>
+        ),
+      },
+    ],
   },
   { path: '*', element: <NotFound /> },
 ];

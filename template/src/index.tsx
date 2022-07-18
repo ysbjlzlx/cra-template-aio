@@ -10,7 +10,7 @@ import global from './styles/global';
 const globalStyles = <GlobalStyles styles={global} />;
 ReactDOM.render(
   <React.StrictMode>
-    <React.Fragment>
+    <>
       <CssBaseline />
       {globalStyles}
       <I18n>
@@ -18,7 +18,7 @@ ReactDOM.render(
           <Router />
         </BrowserRouter>
       </I18n>
-    </React.Fragment>
+    </>
   </React.StrictMode>,
   document.getElementById('root'),
 );
