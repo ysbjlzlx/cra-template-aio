@@ -1,6 +1,6 @@
-import React, { FC, useEffect, useState } from 'react';
-import { createIntl, RawIntlProvider, createIntlCache, IntlConfig } from 'react-intl';
 import { observer } from 'mobx-react-lite';
+import React, { FC, useEffect, useState } from 'react';
+import { createIntl, createIntlCache, IntlConfig, RawIntlProvider } from 'react-intl';
 
 import { useRootStoreContext } from '../stores';
 import en from './lang/en';
@@ -19,7 +19,7 @@ const locales: Record<string, IntlConfig> = {
  */
 const defaultLocal = 'zh-CN';
 
-const I18n: FC = ({ children }) => {
+const I18n: FC<{ children: React.ReactNode }> = ({ children }) => {
   const [intlConfig, setIntlConfig] = useState<IntlConfig>({
     ...locales[defaultLocal],
     defaultLocale: defaultLocal,
