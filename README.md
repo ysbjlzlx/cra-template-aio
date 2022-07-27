@@ -39,7 +39,7 @@ yarn run start
 | `@mui/material` `@emotion/react` `@emotion/styled`     | MUI 组件       |
 | `react-hook-form` `@hookform/resolvers` `joi`          | 表单处理及数据校验    |
 | `axios`                                                | 网络请求         |
-| `husky` `lint-staged` `prettier` `@umijs/fabric`       | Code style   |
+| `husky` `lint-staged` `prettier` `eslint-config-alloy` | Code style   |
 | `@craco/craco@7.0.0-alpha.3` `eslint-config-react-app` | Build config |
 
 
@@ -54,3 +54,4 @@ yarn run start
 ## 已知问题
 
 * 当使用 `npx create-react-app my-app --template aio` 创建项目时 script `prepare` 不会自动执行，需要项目创建后手动执行
+* 当使用 `yarn create react-app my-app --template cra-template-aio` 创建项目时，不会自动运行 `git init`
