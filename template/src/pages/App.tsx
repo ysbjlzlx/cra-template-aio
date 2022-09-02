@@ -1,18 +1,17 @@
 import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material';
-import { observer } from 'mobx-react-lite';
 import { ReactElement } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { useRootStoreContext } from '../stores';
 
+import useLocaleStore from '../stores/AppStore';
 import './App.css';
 import logo from './logo.svg';
 
 const App = (): ReactElement => {
-  const { app } = useRootStoreContext();
+  const { locale, setLocale } = useLocaleStore();
   const intl = useIntl();
 
   const changeLanguage = (event: SelectChangeEvent) => {
-    app.setLocale(event.target.value);
+    setLocale(event.target.value);
   };
 
   return (
@@ -23,7 +22,7 @@ const App = (): ReactElement => {
           Edit <code>src/pages/App.tsx</code> and save to reload.
         </p>
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
+          <FormattedMessage id="Learn React" defaultMessage="Learn React" />
         </a>
         <FormControl sx={{ mt: 2 }}>
           <InputLabel id="language-select-id">
@@ -32,7 +31,7 @@ const App = (): ReactElement => {
           <Select
             labelId="language-select-id"
             label={intl.formatMessage({ id: 'multiLanguage' })}
-            value={app.locale || undefined}
+            value={locale || undefined}
             onChange={changeLanguage}
             sx={{ width: 200, color: 'revert' }}
           >
@@ -45,4 +44,4 @@ const App = (): ReactElement => {
   );
 };
 
-export default observer(App);
+export default App;
