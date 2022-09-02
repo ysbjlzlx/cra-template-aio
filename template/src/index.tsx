@@ -3,9 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
-import I18n from './i18n';
+import I18n from './aio/Locale';
+import Router from './aio/Router';
 import reportWebVitals from './reportWebVitals';
-import Router from './router';
 import global from './styles/global';
 
 const globalStyles = <GlobalStyles styles={global} />;
