@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { RouteObject } from 'react-router-dom';
+
 import Layout from '../layouts/Index';
 import Loading from '../pages/Loading';
 import NotFound from '../pages/NotFound';

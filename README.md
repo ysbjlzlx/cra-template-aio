@@ -4,7 +4,6 @@
 [![npm](https://img.shields.io/npm/v/cra-template-aio)](https://www.npmjs.com/package/cra-template-aio)
 [![npm](https://img.shields.io/npm/dy/cra-template-aio)](https://www.npmjs.com/package/cra-template-aio)
 
-
 [![GitHub Repo stars](https://img.shields.io/github/stars/ysbjlzlx/cra-template-aio?style=social)](https://github.com/ysbjlzlx/cra-template-aio)
 
 `aio` (ALL in one) 是已配置好前端常用开发组件的 `create-react-app` 模版，项目开箱可用。
@@ -19,29 +18,28 @@
 ## 安装
 
 ```shell
-yarn create react-app my-app --template cra-template-aio
+npx create-react-app my-app-aio --template aio
 ```
 
 ## 运行
 
 ```shell
 # http://localhost:3000
-yarn run start
+npm run start
 ```
 
 ## 已安装依赖
 
-| 组件名称                                                   | 功能           |
-|--------------------------------------------------------|:-------------|
-| `react-router-dom`                                     | 路由           |
-| `mobx` `mobx-react-lite` `mobx-state-tree`             | 状态管理         |
-| `react-intl`                                           | 国际化          |
-| `@mui/material` `@emotion/react` `@emotion/styled`     | MUI 组件       |
-| `react-hook-form` `@hookform/resolvers` `joi`          | 表单处理及数据校验    |
-| `axios`                                                | 网络请求         |
-| `husky` `lint-staged` `prettier` `eslint-config-alloy` | Code style   |
-| `@craco/craco@7.0.0-alpha.3` `eslint-config-react-app` | Build config |
-
+| 组件名称                                                                                                         | 功能           |
+|--------------------------------------------------------------------------------------------------------------|:-------------|
+| `react-router-dom`                                                                                           | 路由           |
+| `zustand`                                                                                                    | 状态管理         |
+| `react-intl`                                                                                                 | 国际化          |
+| `@mui/material` `@emotion/react` `@emotion/styled`                                                           | MUI 组件       |
+| `react-hook-form` `@hookform/resolvers` `joi`                                                                | 表单处理及数据校验    |
+| `axios`                                                                                                      | 网络请求         |
+| `husky` `lint-staged` `prettier` `eslint-config-alloy` `eslint-config-react-app` `stylelint-config-standard` | Code style   |
+| `@craco/craco`                                                                                               | Build config |
 
 ## 推荐安装依赖
 
@@ -53,5 +51,5 @@ yarn run start
 
 ## 已知问题
 
-* 当使用 `npx create-react-app my-app --template aio` 创建项目时 script `prepare` 不会自动执行，需要项目创建后手动执行
-* 当使用 `yarn create react-app my-app --template cra-template-aio` 创建项目时，不会自动运行 `git init`
+* 当使用 `npx create-react-app my-app-aio --template aio` 创建项目时 script `prepare` 不会自动执行，需要项目创建后手动执行
+* 当使用 `yarn create react-app my-app-aio --template cra-template-aio` 创建项目时，不会自动运行 `git init`
