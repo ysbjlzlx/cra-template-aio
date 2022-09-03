@@ -1,28 +1,25 @@
-import { CssBaseline, GlobalStyles } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 import I18n from './aio/Locale';
 import Router from './aio/Router';
+import globalTheme from './config/global-theme';
 import reportWebVitals from './reportWebVitals';
-import global from './styles/global';
-
-const globalStyles = <GlobalStyles styles={global} />;
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <React.StrictMode>
-    <>
+    <ThemeProvider theme={globalTheme}>
       <CssBaseline />
-      {globalStyles}
       <I18n>
         <BrowserRouter>
           <Router />
         </BrowserRouter>
       </I18n>
-    </>
+    </ThemeProvider>
   </React.StrictMode>,
 );
 
