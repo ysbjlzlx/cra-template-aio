@@ -2,7 +2,7 @@ import React, { FC, useEffect } from 'react';
 import { IntlProvider } from 'react-intl';
 
 import { defaultLocale, locales } from '../config/Locale';
-import useLocaleStore from '../stores/AppStore';
+import useLocaleStore from '../stores/LocaleStore';
 
 const I18n: FC<{ children: React.ReactNode }> = ({ children }) => {
   const { locale, messages, setLocale, setMessages } = useLocaleStore();

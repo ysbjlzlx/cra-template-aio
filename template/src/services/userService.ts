@@ -1,5 +1,5 @@
-import request from './request';
+import request from '../aio/Request';
 
-export function profile() {
-  return request.get('/profile');
-}
+export const profile = () => {
+  return request.get('/user/profile');
+};

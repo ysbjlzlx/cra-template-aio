@@ -2,7 +2,7 @@ import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@m
 import { ReactElement } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-import useLocaleStore from '../stores/AppStore';
+import useLocaleStore from '../stores/LocaleStore';
 import './App.css';
 import logo from './logo.svg';
 
