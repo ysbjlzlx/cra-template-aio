@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
-import I18n from './aio/Locale';
+import './aio/i18n';
 import Router from './aio/Router';
 import globalTheme from './config/global-theme';
 import reportWebVitals from './reportWebVitals';
@@ -14,11 +14,9 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={globalTheme}>
       <CssBaseline />
-      <I18n>
-        <BrowserRouter>
-          <Router />
-        </BrowserRouter>
-      </I18n>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,
 );

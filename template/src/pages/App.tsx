@@ -1,17 +1,18 @@
 import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material';
 import { ReactElement } from 'react';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 
 import useLocaleStore from '../stores/LocaleStore';
 import './App.css';
 import logo from './logo.svg';
 
 const App = (): ReactElement => {
-  const { locale, setLocale } = useLocaleStore();
-  const intl = useIntl();
+  const { setLocale } = useLocaleStore();
+  const { t, i18n } = useTranslation();
 
   const changeLanguage = (event: SelectChangeEvent) => {
     setLocale(event.target.value);
+    i18n.changeLanguage(event.target.value);
   };
 
   return (
@@ -22,20 +23,18 @@ const App = (): ReactElement => {
           Edit <code>src/pages/App.tsx</code> and save to reload.
         </p>
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          <FormattedMessage id="Learn React" defaultMessage="Learn React" />
+          {t('Learn React', { defaultValue: 'Learn React' })}
         </a>
         <FormControl sx={{ mt: 2 }}>
-          <InputLabel id="language-select-id">
-            <FormattedMessage id="multiLanguage" />
-          </InputLabel>
+          <InputLabel id="language-select-id">{t('multiLanguage')}</InputLabel>
           <Select
             labelId="language-select-id"
-            label={intl.formatMessage({ id: 'multiLanguage' })}
-            value={locale || undefined}
+            label={t('multiLanguage')}
+            value={i18n.language}
             onChange={changeLanguage}
             sx={{ width: 200, color: 'revert' }}
           >
-            <MenuItem value="zh-CN">简体中文</MenuItem>
+            <MenuItem value="zh-Hans">简体中文</MenuItem>
             <MenuItem value="en">English</MenuItem>
           </Select>
         </FormControl>
