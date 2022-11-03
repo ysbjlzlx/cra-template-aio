@@ -3,8 +3,7 @@ name: Pull request check
 on:
   push:
     branches:
-      - main
-
+      - develop
 jobs:
   deploy:
     runs-on: ubuntu-22.04
