@@ -2,7 +2,8 @@ name: Pull request check
 
 on:
   push:
-    - develop
+    branches:
+      - main
 
 jobs:
   deploy:
