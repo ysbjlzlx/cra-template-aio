@@ -1,0 +1,18 @@
+name: Pull request check
+
+on:
+  push:
+    - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+      - run: npx create-react-app my-app-aio --template file:./cra-template-aio
