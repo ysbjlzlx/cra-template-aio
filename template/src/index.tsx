@@ -1,22 +1,18 @@
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 
 import './aio/i18n';
 import Router from './aio/Router';
 import globalTheme from './config/global-theme';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-
-root.render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={globalTheme}>
       <CssBaseline />
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
+      <RouterProvider router={Router} />
     </ThemeProvider>
   </React.StrictMode>,
 );

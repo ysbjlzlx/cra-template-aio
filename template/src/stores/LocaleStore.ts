@@ -1,4 +1,4 @@
-import create from 'zustand';
+import { create } from 'zustand';
 import { defaultLocale } from '../config/locale';
 
 interface LocaleStore {

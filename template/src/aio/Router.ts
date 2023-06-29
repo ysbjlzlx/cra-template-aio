@@ -1,10 +1,7 @@
-import { ReactElement } from 'react';
-import { useRoutes } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
 import routes from '../config/Routes';
 
-const Router = (): ReactElement | null => {
-  return useRoutes(routes);
-};
+const Router = createBrowserRouter(routes);
 
 export default Router;
