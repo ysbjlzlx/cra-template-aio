@@ -4,15 +4,15 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
 
 import './aio/i18n';
-import Router from './aio/Router';
 import globalTheme from './config/global-theme';
+import router from './config/router';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={globalTheme}>
       <CssBaseline />
-      <RouterProvider router={Router} />
+      <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>,
 );

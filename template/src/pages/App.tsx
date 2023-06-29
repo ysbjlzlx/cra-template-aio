@@ -2,16 +2,13 @@ import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@m
 import { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import useLocaleStore from '../stores/LocaleStore';
 import './App.css';
 import logo from './logo.svg';
 
 const App = (): ReactElement => {
-  const { setLocale } = useLocaleStore();
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (event: SelectChangeEvent) => {
-    setLocale(event.target.value);
     i18n.changeLanguage(event.target.value);
   };
 

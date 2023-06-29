@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { RouteObject } from 'react-router-dom';
+import {createBrowserRouter, RouteObject} from 'react-router-dom';
 
 import Layout from '../layouts/Index';
 import Loading from '../pages/Loading';
@@ -7,7 +7,7 @@ import NotFound from '../pages/NotFound';
 
 const App = lazy(() => import('../pages/App'));
 
-const Routes: RouteObject[] = [
+const routes: RouteObject[] = [
   {
     path: '/',
     element: <Layout />,
@@ -25,4 +25,4 @@ const Routes: RouteObject[] = [
   { path: '*', element: <NotFound /> },
 ];
 
-export default Routes;
+export default createBrowserRouter(routes);

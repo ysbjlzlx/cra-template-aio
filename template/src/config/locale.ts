@@ -1,7 +1,5 @@
 import { InitOptions } from 'i18next';
 
-export const defaultLocale = 'zh-Hans';
-
 export const initOptions: InitOptions = {
   backend: {
     // 網頁載入時去下載語言檔的位置
@@ -19,5 +17,4 @@ export const initOptions: InitOptions = {
   interpolation: {
     escapeValue: false, // react already safes from xss
   },
-  detection: {},
 };
