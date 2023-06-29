@@ -58,3 +58,11 @@ npm run start
     * 需要自己手动删除 `package-lock.json` `node_modules`，然后执行 `pnpm install`
 * 当使用 `yarn create react-app my-app-aio --template cra-template-aio` 创建项目时
     * 不会自动运行 `git init`
+* 受限于 `react-scripts` 依赖限制，`typescript` 依赖目前只能支持到 `4.9.5` 版本，可在 `packages.json` 中添加 `orerrides` 解决依赖问题
+```json
+  "overrides": {
+    "react-scripts": {
+      "typescript": "5.1.6"
+    }
+  }
+```
