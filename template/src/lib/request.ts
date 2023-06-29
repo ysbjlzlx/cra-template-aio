@@ -1,13 +1,10 @@
 import axios from 'axios';
 
-import { AxiosRequestConfig } from 'axios';
 import useAccessTokenStore from '../stores/AccessTokenStore';
 
-const axiosRequestConfig: AxiosRequestConfig = {
+const client = axios.create({
   timeout: 5000,
-};
-
-const client = axios.create(axiosRequestConfig);
+});
 
 client.interceptors.request.use(
   (config) => {
