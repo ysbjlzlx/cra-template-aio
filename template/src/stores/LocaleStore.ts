@@ -1,4 +1,6 @@
 import { create } from 'zustand';
+import { createJSONStorage,persist } from 'zustand/middleware';
+
 import { defaultLocale } from '../config/locale';
 
 interface LocaleStore {
@@ -6,13 +8,17 @@ interface LocaleStore {
   setLocale: (val: string) => void;
 }
 
-const useLocaleStore = create<LocaleStore>()((set) => ({
-  locale: localStorage.getItem('locale') || defaultLocale,
-  setLocale: (val) =>
-    set(() => {
-      localStorage.setItem('locale', val);
-      return { locale: val };
+const useLocaleStore = create<LocaleStore>()(
+  persist(
+    (set) => ({
+      locale: defaultLocale,
+      setLocale: (val) =>
+        set(() => {
+          return { locale: val };
+        }),
     }),
-}));
+    { name: 'locale', storage: createJSONStorage(() => localStorage) },
+  ),
+);
 
 export default useLocaleStore;

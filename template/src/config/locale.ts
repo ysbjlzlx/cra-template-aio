@@ -15,7 +15,9 @@ export const initOptions: InitOptions = {
     zh: ['zh-Hans'],
     'zh-CN': ['zh-Hans'],
   },
+  supportedLngs: ['zh-Hans', 'en'],
   interpolation: {
     escapeValue: false, // react already safes from xss
   },
+  detection: {},
 };
